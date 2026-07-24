@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-24T04:16:36.046Z",
+  "assets": [
+    {
+      "id": "warrior",
+      "kind": "character",
+      "url": "processed-assets/characters/warrior.glb",
+      "scale": 0.72,
+      "rotationY": 3.141592653589793,
+      "animations": {
+        "idle": "idle",
+        "walk": "walk",
+        "attack": "attack"
+      }
+    },
+    {
+      "id": "orc",
+      "kind": "monster",
+      "url": "processed-assets/monsters/orc.glb",
+      "scale": 0.8,
+      "rotationY": 3.141592653589793,
+      "animations": {
+        "idle": "idle",
+        "walk": "walk",
+        "attack": "attack"
+      }
+    }
+  ]
+}

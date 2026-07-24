@@ -14,7 +14,7 @@ Open the local URL printed by Vite. The app also works without processed models 
 
 ## Source assets
 
-The included build pipeline expects the CC0 Quaternius packs listed below. Original archives, extracted sources, and generated GLBs are deliberately ignored by Git.
+The included build pipeline expects the CC0 Quaternius packs listed below. Original archives and extracted sources are deliberately ignored by Git. The two optimized runtime GLBs and their manifest are allowlisted so the GitHub Pages build can ship the same rigged models used locally.
 
 1. Put `RPG Characters - Nov 2020` in `source-assets/quaternius-rpg-characters/`.
 2. Put `Ultimate Monsters` in `source-assets/quaternius-ultimate-monsters/`.
@@ -48,13 +48,14 @@ The Vite config reads `VITE_BASE_PATH`. When Pages deployment is enabled for a p
 VITE_BASE_PATH=/20260723-3d-rpg/ npm run build
 ```
 
-Generated production GLBs are not committed. A future Pages workflow should build or download them during deployment.
+Pushes to `main` automatically build and deploy through GitHub Actions. The workflow validates the committed optimized GLBs and builds with the project base path before publishing `dist/`.
 
 ## Repository policy
 
 - No individual committed file may exceed 10 MB.
 - The size check warns above 150 MB total and fails above 900 MB.
-- Source packs, archives, generated GLBs, `node_modules`, build output, screenshots, and recordings are ignored.
+- Source packs, archives, non-allowlisted generated GLBs, `node_modules`, build output, screenshots, and recordings are ignored.
+- The shipped `warrior.glb`, `orc.glb`, and asset manifest add approximately 196 KiB.
 - No Git LFS is used for milestone one.
 
 Quaternius assets are published under CC0; see the license files in the downloaded packs.

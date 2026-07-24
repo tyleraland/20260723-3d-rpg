@@ -18,6 +18,11 @@ test-results/
 
 /public/processed-assets/*
 !/public/processed-assets/README.md
+!/public/processed-assets/asset-manifest.json
+!/public/processed-assets/characters/
+!/public/processed-assets/characters/warrior.glb
+!/public/processed-assets/monsters/
+!/public/processed-assets/monsters/orc.glb
 
 .env
 .env.local
